@@ -1,8 +1,8 @@
 /*--------------------------------------------NAV---GAUCHE-------------------------------------------------*/
-header{
+nav{
 	background-color: #3b414f;
 }
-header img{
+nav img{
 	margin-top: 20px;
 	
 	box-shadow: 2px 2px 4px black;
@@ -12,27 +12,24 @@ address{
 	color: #dcedf2;
 	text-shadow: 1px 1px 2px black;
 }
-header a h4{
+nav a h4{
 	color: #dcedf2;
 	line-height: 60px;
 	padding: 5px;
 	border-top: 1px double black;
 	margin: 0;
 }
-header a :hover{
+nav a :hover{
 	color: white;
 	background-color: #202528;
 }
-header:hover a {
+nav:hover a {
 	text-decoration: none;
 }
-header svg{
+nav svg{
 	padding-right: 30px;
 }
 /*---------------------------------------------SECTION--------------------------------------------------*/
-section{
-	background-color: #c6cace;
-}
 
 
 
