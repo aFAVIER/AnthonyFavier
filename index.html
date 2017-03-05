@@ -71,7 +71,7 @@
 					<div class="row">
 						<div class="col-md-9">
 							<h2>A propos de moi</h2>
-							<h4 class="text-justify">Lorem Salu bissame !</h4>
+							<h4 class="text-justify"></h4>
 							<div class="">
 								<ul id="nav_slide2" class="nav navbar-nav text-center">
 									<li><a href=""><h5>Bio</h5></a></li>
