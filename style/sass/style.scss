@@ -18,7 +18,7 @@ $font_3:'Audiowide', cursive;
 
 //-------------images---------------//
 $img_slide_1:'f.jpg';
-$img_slide_2:'laptop.jpg';
+$img_slide_2:'bio.jpg';
 $img_slide_3:'dark.png';
 
 //------------var anim--------------//
@@ -32,6 +32,7 @@ $cubic-bezier_2:1;
 @import '_tangram';
 
 //--------------MIXIN---------------//
+
 @mixin anim($var_position, $valeur_bezier){
 	-webkit-transition: $var_position 1.4s  cubic-bezier(.49,.22,.52,1);
 	-moz-transition: $var_position 1.4s cubic-bezier(.49,.22,.52,$valeur_bezier);
@@ -45,11 +46,11 @@ $cubic-bezier_2:1;
 	@include anim($position_1, $cubic-bezier_1);
 }
 @mixin text_nav($colorText, $colorShadow){
-	display: inline-block;
-	margin: 0 3em;
+	//display: inline-block;
+	//margin: 0 3em;
 	color: $colorText;
 	text-transform: uppercase;
-	text-decoration: none;
+	//text-decoration: none;
 	text-shadow: 0 0 5px $colorShadow;
 	-webkit-transition: all 1s;
 	-moz-transition: all 1s;
@@ -57,6 +58,7 @@ $cubic-bezier_2:1;
 	-o-transition: all 1s;
 	transition: all 1s;
 }
+/*
 @mixin img_1_2(){
 	position: absolute;
 	left:-180px; top: 300px;
@@ -67,9 +69,10 @@ $cubic-bezier_2:1;
 	transform: rotate(10deg);
 	@include anim($position_3, $cubic-bezier_2);
 }
+*/
 @mixin slide-inside($padding-bottom){
-	width: 770px;
-	margin: 0 auto;
+	//width: 770px;
+	//margin: 0 auto;
 	position: relative;
 	background-color: rgba(0, 0, 0, .6);
 	padding: 50px;
@@ -101,14 +104,14 @@ body {
 			position: fixed;
 			top: 0; left:0; right: 0;
 			padding: 1em 0;
-			margin:0;
+		//	margin:0;
 			background: $color_background;
-			text-align:center;
+		//	text-align:center;
 			font-size: 1em;
 			z-index:10;
 			li {
-				display: inline;
-				margin:0;
+			//	display: inline;
+			//	margin:0;
 				a {
 					@include text_nav($color_text_nav, $color_text_nav_shadow );
 				}
@@ -137,7 +140,7 @@ body {
 			background:url('../../img/'+$img_slide_2) center 0 no-repeat fixed;
 			.slide_inside{
 				@include slide-inside(0px);
-				#img1{
+			/*	#img1{
 					width:150px;
 					@include img_1_2();
 				}
@@ -146,7 +149,7 @@ body {
 					top: 400px;
 					width:100px;
 					@include img_1_2();
-				}
+				}*/
 			}
 			#nav_slide2{
 				@include text_nav($color_text, $color_2);
@@ -170,9 +173,13 @@ body {
 			.slide_inside{
 				@include slide-inside(20px);
 				margin-bottom: 50px;
+				height:350px;
 			}
 			#map{
-				box-shadow: 2px 2px 4px $color_shadow;
+				border:1px solid black;
+				box-shadow: 4px 4px 2px $color_shadow;
+				//width:400px;
+				height:270px;
 			}
 			form{
 				legend{
@@ -190,25 +197,24 @@ body {
 #s1:target ~ #wrap #slide1 { background-position: 50% 0%; }
 #s1:target ~ #wrap #slide2 { background-position: 50% -35%; }
 #s1:target ~ #wrap #slide3 { background-position: 50% -60%; }
-#s1:target ~ #wrap #img1 { left: -180px; top: 300px; -webkit-transform: rotate(10deg);-moz-transform: rotate(10deg);-ms-transform: rotate(10deg);-o-transform: rotate(10deg);transform: rotate(10deg); }
-#s1:target ~ #wrap #img2 { left: -280px; top: 300px;-webkit-transform: rotate(10deg);-moz-transform: rotate(10deg);-ms-transform: rotate(10deg);-o-transform: rotate(10deg);transform: rotate(10deg); }
+//#s1:target ~ #wrap #img1 { left: -180px; top: 300px; -webkit-transform: rotate(10deg);-moz-transform: rotate(10deg);-ms-transform: rotate(10deg);-o-transform: rotate(10deg);transform: rotate(10deg); }
+//#s1:target ~ #wrap #img2 { left: -280px; top: 300px;-webkit-transform: rotate(10deg);-moz-transform: rotate(10deg);-ms-transform: rotate(10deg);-o-transform: rotate(10deg);transform: rotate(10deg); }
 
 #s2:target ~ #wrap { top:-1000px; }
 #s2:target ~ #wrap #nav li:first-child + li a { text-shadow: 0 0 5px $color_h2, 0 0 5px $color_h2, 0 0 5px $color_h2, 0 0 5px $color_h2; }
 #s2:target ~ #wrap #slide1 { background-position: 50% 36%; }
 #s2:target ~ #wrap #slide2 { background-position: 50% 0%; }
 #s2:target ~ #wrap #slide3 { background-position: 50% -30%; }
-#s2:target ~ #wrap #img1 { left: -180px; top: -100px; -webkit-transform: rotate(-7deg);-moz-transform: rotate(-7deg);-ms-transform: rotate(-7deg);-o-transform: rotate(-7deg);transform: rotate(-7deg); }
-#s2:target ~ #wrap #img2 { left: -350px; top: 50px; -webkit-transform: rotate(0deg);-moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg);transform: rotate(0deg); }
-
+//#s2:target ~ #wrap #img1 { left: -180px; top: -100px; -webkit-transform: rotate(-7deg);-moz-transform: rotate(-7deg);-ms-transform: rotate(-7deg);-o-transform: rotate(-7deg);transform: rotate(-7deg); }
+//#s2:target ~ #wrap #img2 { left: -350px; top: 50px; -webkit-transform: rotate(0deg);-moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg);transform: rotate(0deg); }
 
 #s3:target ~ #wrap { top:-2000px; }
 #s3:target ~ #wrap #nav li:last-child a { text-shadow: 0 0 5px $color_h2, 0 0 5px $color_h2, 0 0 5px $color_h2, 0 0 5px $color_h2; }
 #s3:target ~ #wrap #slide1 { background-position: 50% 60%; }
 #s3:target ~ #wrap #slide2 { background-position: 50% 35%; }
 #s3:target ~ #wrap #slide3 { background-position: 50% 0%; }
-#s3:target ~ #wrap #img1 { left:-1500px;top:-1000px;-webkit-transform:rotate(-15deg);-moz-transform:rotate(-15deg);-ms-transform:rotate(-15deg);-o-transform:rotate(-15deg);transform: rotate(-15deg); }
-#s3:target ~ #wrap #img2 { left:-1000px;top: -800px;-webkit-transform: rotate(-15deg);-moz-transform: rotate(-15deg);-ms-transform: rotate(-15deg);-o-transform: rotate(-15deg);transform: rotate(-15deg); }
+//#s3:target ~ #wrap #img1 { left:-1500px;top:-1000px;-webkit-transform:rotate(-15deg);-moz-transform:rotate(-15deg);-ms-transform:rotate(-15deg);-o-transform:rotate(-15deg);transform: rotate(-15deg); }
+//#s3:target ~ #wrap #img2 { left:-1000px;top: -800px;-webkit-transform: rotate(-15deg);-moz-transform: rotate(-15deg);-ms-transform: rotate(-15deg);-o-transform: rotate(-15deg);transform: rotate(-15deg); }
 
 
 //----------------------------refacto-----------------------// 
@@ -223,8 +229,8 @@ body {
 	$slide_name+:target ~ #wrap #slide1 { background-position: 50% 0%; }
 	$slide_name+:target ~ #wrap #slide2 { background-position: 50% -35%; }
 	$slide_name+:target ~ #wrap #slide3 { background-position: 50% -60%; }
-	$slide_name+:target ~ #wrap #img1 { left: $img1_left; top: $img1_top; -webkit-transform: rotate($img1_deg);-moz-transform: rotate($img1_deg);-ms-transform: rotate($img1_deg);-o-transform: rotate($img1_deg);transform: rotate($img1_deg); }
-	$slide_name+:target ~ #wrap #img2 { left: $img2_left; top: $img2_top;-webkit-transform: rotate($img2_deg);-moz-transform: rotate($img2_deg);-ms-transform: rotate($img2_deg);-o-transform: rotate($img2_deg);transform: rotate($img2_deg); }	
+	//$slide_name+:target ~ #wrap #img1 { left: $img1_left; top: $img1_top; -webkit-transform: rotate($img1_deg);-moz-transform: rotate($img1_deg);-ms-transform: rotate($img1_deg);-o-transform: rotate($img1_deg);transform: rotate($img1_deg); }
+	//$slide_name+:target ~ #wrap #img2 { left: $img2_left; top: $img2_top;-webkit-transform: rotate($img2_deg);-moz-transform: rotate($img2_deg);-ms-transform: rotate($img2_deg);-o-transform: rotate($img2_deg);transform: rotate($img2_deg); }	
 }
 
 @include target(0px, #s1, li:first-child a, 0%, -35%, -60%, -180px, 300px, 10deg, -280px, 300px, 10deg);
