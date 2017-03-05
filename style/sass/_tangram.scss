@@ -1,0 +1,203 @@
+@mixin triangle($couleur, $name){
+	fill: $couleur;/*------------------------------------------------couleur fond*/
+	animation-name:$name;/*-------------------------------------creation nom pour animation avec keyframes*/
+	animation-iteration-count: infinite;/*							animation infini*/
+	animation-duration: 10s;/*--------------------------------------temps de l'animation*/
+
+}
+#triangle1{
+	@include triangle(#ff000d, triangle1);
+}
+#triangle2{
+	@include triangle(#ff6600, triangle2);
+}
+#triangle3{
+	@include triangle(#207ac9, triangle3);
+}
+#carre{
+	@include triangle(#f0d105, carre);
+}
+#triangle4{
+	@include triangle(#02bd53, triangle4);
+}
+#triangle5{
+	@include triangle(#af09e6, triangle5);
+}
+#trapeze{
+	@include triangle(#707070, trapeze);
+}
+
+@mixin anim($rZ, $rX, $rY){
+		transform-origin: bottom left;
+		//-webkit-transform-origin: bottom left;
+		-moz-transform-origin: bottom left;
+		transform: rotateZ($rZ) translateX($rX) translateY($rY);
+		-moz-transform: rotateZ($rZ) translateX($rX) translateY($rY);
+		//-webkit-transform: rotate($rZ) translate($rX) translate($rY);
+}
+
+@keyframes triangle1{
+	0%{
+		@include anim(0,0,0);
+	}
+	18%{
+		@include anim(-90deg,-15px,84px);
+	}
+	38%{
+		@include anim(-90deg,-15px,84px);
+	}
+	50%{
+		@include anim(45deg,14px,5px);
+	}
+	70%{
+		@include anim(45deg,14px,5px);
+	}
+	85%{
+		@include anim(0,0,0);
+	}
+	100%{
+		@include anim(0,0,0);
+	}
+}
+@keyframes triangle2{
+	0%{
+		@include anim(0,0,0);
+	}
+	18%{
+		@include anim(-135deg,-15px,35px);
+	}
+	38%{
+		@include anim(-135deg,-15px,35px);
+	}
+	50%{
+		@include anim(315deg,33px,10px);
+	}
+	70%{
+		@include anim(315deg,33px,10px);
+	}
+	85%{
+		@include anim(0,0,0);
+	}
+	100%{
+		@include anim(0,0,0);
+	}
+}
+@keyframes triangle3{
+	0%{
+		@include anim(0,0,0);
+	}
+	18%{
+		@include anim(-90deg,-22px,75px);
+	}
+	38%{
+		@include anim(-90deg,-22px,75px);
+	}
+	50%{
+		@include anim(0deg,18px,-1px);
+	}
+	70%{
+		@include anim(0deg,18px,-1px);
+	}
+	85%{
+		@include anim(0,0,0);
+	}
+	100%{
+		@include anim(0,0,0);
+	}
+}
+//queue
+@keyframes trapeze{
+	0%{
+		@include anim(0,0,0);
+	}
+	18%{
+		@include anim(-45deg,40px,40px);
+	}
+	38%{
+		@include anim(-45deg,40px,40px);
+	}
+	50%{
+		@include anim(45deg,-41px,40px);
+	}
+	70%{
+		@include anim(45deg,-41px,40px);
+	}
+	85%{
+		@include anim(0,0,0);
+	}
+	100%{
+		@include anim(0,0,0);
+	}
+}
+//tete
+@keyframes carre{
+	0%{
+		@include anim(0,0,0);
+	}
+	18%{
+		@include anim(-90deg,-40px,13px);
+	}
+	38%{
+		@include anim(-90deg,-40px,13px);
+	}
+	50%{
+		@include anim(0deg,18px,-2px);
+	}
+	70%{
+		@include anim(0deg,18px,-2px);
+	}
+	85%{
+		@include anim(0,0,0);
+	}
+	100%{
+		@include anim(0,0,0);
+	}
+}
+//oreille droite
+@keyframes triangle4{
+	0%{
+		@include anim(0,0,0);
+	}
+	18%{
+		@include anim(180deg,18px,-10px);
+	}
+	38%{
+		@include anim(180deg,18px,-10px);
+	}
+	50%{
+		@include anim(180deg,-16px,31px);
+	}
+	70%{
+		@include anim(180deg,-16px,31px);
+	}
+	85%{
+		@include anim(0,0,0);
+	}
+	100%{
+		@include anim(0,0,0);
+	}
+}
+//oreille gauche
+@keyframes triangle5{
+	0%{
+		@include anim(0,0,0);
+	}
+	18%{
+		@include anim(180deg,-15px,-10px);
+	}
+	38%{
+		@include anim(180deg,-15px,-10px);
+	}
+	50%{
+		@include anim(-180deg,-50px,31px);
+	}
+	70%{
+		@include anim(-180deg,-50px,31px);
+	}
+	85%{
+		@include anim(0,0,0);
+	}
+	100%{
+		@include anim(0,0,0);
+	}
+}
