@@ -68,7 +68,7 @@
 				<div class="row">
 					<div class="col-md-9">
 						<h2>A propos de moi</h2>
-						<h4>Lorem Salu bissame !</h4>
+						<h4 class="text-justify">Lorem Salu bissame !</h4>
 						<div class="">
 							<ul id="nav_slide2" class="nav navbar-nav text-center">
 								<li><a href=""><h5>Bio</h5></a></li>
@@ -102,11 +102,11 @@
 			<article class="slide_inside row">	
 				<div class="col-md-5">		
 					<h2>Contact</h2><br>		
-						<h4><strong>Courriel:</strong><a href=""> anthony.favier03@gmail.com</a></h4><br>
-						<h4><strong>Tel:</strong> 06.10.26.39.81</h4><br>
+						<h4><strong>Courriel:</strong><a href=""><i> anthony.favier03@gmail.com</i></a></h4><br>
+						<h4><strong>Tel:</strong><i> 06.10.26.39.81</h4><br>
 						<h4><strong>anthony FAVIER</strong></h4>
 						<h4>8 rue de l'étang</h4>
-						<h4>03110 St Rémy-en-Rollat</h4>
+						<h4>03110 St Rémy-en-Rollat</h4></i>
 				</div>
 				<div class="col-md-7">
 					<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44203.73524511744!2d3.3741122511065167!3d46.17596144350246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f12d0c3d9441d5%3A0x4093cafcbebbb70!2s03110+Saint-R%C3%A9my-en-Rollat!5e0!3m2!1sfr!2sfr!4v1488667404235" width="400" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
